@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package sample.data.jest;
+package com.dfs.ace.catalog.api;
 
 import java.io.File;
 

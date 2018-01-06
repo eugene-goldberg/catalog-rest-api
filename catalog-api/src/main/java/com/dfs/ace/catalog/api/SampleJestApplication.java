@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-package sample.data.jest;
+package com.dfs.ace.catalog.api;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
