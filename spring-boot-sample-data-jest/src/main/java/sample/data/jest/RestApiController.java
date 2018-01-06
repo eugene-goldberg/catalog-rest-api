@@ -23,7 +23,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-public class DatasetMetadataRestApiController {
+public class RestApiController {
 //    @Autowired
 //    private DatasetRepository repository;
 //

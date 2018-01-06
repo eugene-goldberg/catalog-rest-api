@@ -3,11 +3,8 @@ package sample.data.jest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import sample.data.jest.DatasetMetadata;
 
 import javax.annotation.PostConstruct;
-import java.util.ArrayList;
-import java.util.List;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,13 +21,13 @@ import org.json.simple.parser.ParseException;
 
 @Component
 public class Loaders {
-    @Autowired
-    private DatasetRepository repository;
+//    @Autowired
+//    private DatasetRepository repository;
 
     @PostConstruct
     @Transactional
     public void loadAll(){
-        DatasetRepository cr = repository;
+ //       DatasetRepository cr = repository;
 //         this.repository.deleteAll();
 //          saveDatasetMetadata();
  //       getElasticRecord();
@@ -97,12 +94,12 @@ public class Loaders {
 //        List<Attribute> attributes = new ArrayList<>();
 //        attributes.add(attribute);
 
-        DatasetMetadata metadata = new DatasetMetadata("ds id 1","ds name 1",
-                "ds desc 1","ds src 1");
-        this.repository.save(metadata);
-
-        DatasetMetadata metadata2 = new DatasetMetadata("ds id 2","ds name 2",
-                "ds desc 2","ds src 2");
-        this.repository.save(metadata2);
+//        DatasetMetadata metadata = new DatasetMetadata("ds id 1","ds name 1",
+//                "ds desc 1","ds src 1");
+//        this.repository.save(metadata);
+//
+//        DatasetMetadata metadata2 = new DatasetMetadata("ds id 2","ds name 2",
+//                "ds desc 2","ds src 2");
+//        this.repository.save(metadata2);
     }
 }
