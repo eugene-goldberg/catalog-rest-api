@@ -1,3 +1,0 @@
-#enabled scripts - this require groovy
-script.inline: true
-script.ingest: true

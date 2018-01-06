@@ -9,6 +9,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +28,9 @@ public class RestApiController {
 //    @Autowired
 //    private DatasetRepository repository;
 //
+@Autowired
+@Value("${searchUrl}")
+public String searchUrl;
 
     @RequestMapping(value = "/metadata/", method = RequestMethod.GET)
     private JSONArray fetchAll() {
@@ -36,7 +40,7 @@ public class RestApiController {
         try {
             DefaultHttpClient httpClient = new DefaultHttpClient();
             HttpGet getRequest = new HttpGet(
-                    "http://34.230.72.180:9200/metadata/_search/");
+                    searchUrl);
             getRequest.addHeader("accept", "application/json");
 
             HttpResponse response = httpClient.execute(getRequest);

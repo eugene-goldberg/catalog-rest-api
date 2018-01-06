@@ -1,5 +1,0 @@
-spring:
-  data:
-    elasticsearch:
-      properties:
-        path.home: ./target/es-${random.uuid}
